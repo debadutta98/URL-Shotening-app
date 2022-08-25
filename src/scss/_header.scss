@@ -1,0 +1,73 @@
+@use "./config" as *;
+header{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    gap:2rem;
+    align-items: stretch;
+    width: 100vw;
+    div{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        h1{
+            font-size:calc(7vw - 2vw);
+            line-height:calc(10vw - 3.5vw);
+        }
+        p{
+            font-size:2vw;
+            margin-right: auto;
+            color: $gray_neutral;
+        }
+        button{
+            @include button(){
+                margin-right: auto;
+                padding:10px 18px;
+                border:none;
+                border-radius: 1rem;
+            }
+        }
+    }
+    img{
+        height:auto;
+        padding-right: 2rem;
+        width:50vw;
+    }
+    @include mobile {
+        padding:0rem;
+        padding-bottom: 5rem;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+        div{
+            margin-left: 0rem;
+            gap:1rem;
+            h1{
+                text-align: center;
+                line-height:clamp(3.5rem,4rem,5rem);
+                font-size: 10vw;
+            }
+            p{
+                text-align: center;
+                font-size:3vw;
+                padding:0rem 3rem;
+            }
+            button{
+                margin: auto;
+            }
+        }
+        img{
+            padding: 0rem 1rem;
+            margin: auto;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

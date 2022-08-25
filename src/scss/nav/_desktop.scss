@@ -1,0 +1,61 @@
+@use "../config" as *;
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    gap:4vw;
+    padding: 2rem 0rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    img{
+        width:5rem;
+        height:1.5rem;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        gap:2rem;
+        a{
+            text-decoration: none;
+            color:$grayish_violet;
+            vertical-align:top;
+            &:hover{
+                color: $very_dark_violet ;
+            }
+        }
+    }
+    .auth{
+        margin-left: auto;
+        &__nav-button{
+            @include button{
+                padding: 5px 15px;
+                border-radius:1rem;
+            }
+        }
+    .nav-menu
+        {
+            display: none;
+        }
+    }
+   @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    img{
+        margin-right: auto;
+    }
+    .nav-menu{
+        cursor: pointer;
+        div{
+            padding:2px 15px;
+            margin-top: 5px;
+            background-color:$gray_neutral;
+            margin-left: auto;
+        }
+    }
+    ul,.auth{
+        display: none;
+    }
+   }
+}

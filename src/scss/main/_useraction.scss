@@ -1,0 +1,42 @@
+@use "../config" as *;
+.user-action-card{
+    position:relative;
+    z-index: 20;
+    top:-3rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+    align-items: stretch;
+    gap:1rem;
+    padding:2rem;
+    background-image: url("../images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $very_dark_blue;
+    border-radius: 5px;
+    &__input{
+        padding:0.7rem;
+        width: 70%;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-size: medium;
+    }
+    &__btn{
+        padding:0.7rem;
+        @include button{
+            border: none;
+            border-radius: 5px;
+        };
+    }
+    @media screen and (max-width:429px){
+        background-image: url("../images/bg-shorten-mobile.svg");
+        &__input{
+        width: 100%;
+        }
+        &__btn{
+            width: 100%;
+        }
+    }
+}

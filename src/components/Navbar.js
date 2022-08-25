@@ -1,16 +1,22 @@
 const Navbar=()=>{
 return (
     <nav>
-        <img src="../images/logo.svg" alt="logo"/>
+        <img src={require("../images/logo.svg").default} alt="logo"/>
+        
         <ul>
             <li><a href="#!">Features</a></li>
             <li><a href="#!">Pricing</a></li>
             <li><a href="#!">Resources</a></li>
         </ul>
-        <ul>
+        <ul className="auth">
             <li><a href="#!">Login</a></li>
-            <li><a href="#!">Sign up</a></li>
+            <li><a href="#!" className="auth__nav-button">Sign up</a></li>
         </ul>
+        <div className="nav-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
 )
 };
