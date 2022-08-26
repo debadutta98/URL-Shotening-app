@@ -1,0 +1,17 @@
+@use "../config" as *;
+.features{
+    margin-top: 2rem;
+    &__container{
+        margin: auto;
+        width:auto;
+        & > p{
+            color:$grayish_violet;
+            font-size: small;
+            padding:0rem 3rem;
+            
+        }
+        & > h1, & > p{
+        text-align: center;
+        }
+    }
+}

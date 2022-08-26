@@ -1,0 +1,68 @@
+@use "../config" as *;
+@use "sass:math";
+.feature-card-container{
+display: grid;
+grid-template-columns:repeat(3,minmax(300px,1fr));
+justify-content: start;
+@media screen and (max-width:1021px) {
+    grid-template-columns:repeat(3,minmax(200px,1fr));
+}
+@media screen and (max-width:842px) {
+    grid-template-columns:repeat(3,minmax(100px,1fr));
+}
+gap:1rem;
+@for $i from 1 through 3 {
+    $add:0rem;
+    @if($i==1){
+        $add:4rem;
+    }@else if ($i==2){
+        $add:calc(#{$i}rem + 5rem);
+    }@else{
+        $add:calc(#{$i}rem + 7rem);
+    }
+     .featureCard-#{$i}{
+        height: fit-content;
+        width: fit-content;
+        padding:2rem;
+        box-shadow: 2px 2px 0.5rem $gray_neutral;
+        background-color: white;
+        position: relative;
+        margin-top:$add;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap:1rem;
+        &__img-container{
+            position: absolute;
+            top:-2.5rem;
+            left:2rem;
+            padding:0.7rem;
+            max-width: fit-content;
+            border-radius:50%;
+            background-color:$very_dark_blue;
+        }
+        & > h2{
+            font-size: 2vw;
+            margin-top: 1rem;
+        }
+        & > p{
+            color:$grayish_violet;
+            font-size: 1vw;
+        }
+        @include mobile{
+            margin-top: 3rem;
+            & > h2{
+                font-size:4vw;
+            }
+            & > p{
+                font-size:3vw;
+            }
+        }
+    }
+}
+@include mobile{
+    grid-template-columns: repeat(1,0.8fr);
+    justify-content: center;
+}
+}
