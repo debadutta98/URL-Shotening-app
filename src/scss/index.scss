@@ -2,6 +2,7 @@
 @use "config" as *;
 @use "./header";
 @use "./main";
+@use "./footer";
 *{
     margin: 0%;
     padding: 0%;
@@ -19,4 +20,12 @@ body{
             padding-right:1rem;
         }
     }
+    /* footer{
+        padding-left: 5rem;
+        padding-right: 2rem;
+        @include mobile{
+            padding-left:1rem;
+            padding-right:1rem;
+        }
+    } */
 }

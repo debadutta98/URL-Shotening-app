@@ -1,6 +1,10 @@
 @use "../config" as *;
 @use "sass:math";
 .feature-card-container{
+background-image: linear-gradient($cyan_primary, $cyan_primary);
+background-size: 80% 5px;
+background-repeat: no-repeat;
+background-position: 55% 55%;
 display: grid;
 grid-template-columns:repeat(3,minmax(300px,1fr));
 justify-content: start;
@@ -10,7 +14,7 @@ justify-content: start;
 @media screen and (max-width:842px) {
     grid-template-columns:repeat(3,minmax(100px,1fr));
 }
-gap:1rem;
+gap:1.2rem;
 @for $i from 1 through 3 {
     $add:0rem;
     @if($i==1){
@@ -35,12 +39,17 @@ gap:1rem;
         gap:1rem;
         &__img-container{
             position: absolute;
-            top:-2.5rem;
+            top:-1.5rem;
             left:2rem;
-            padding:0.7rem;
+            padding:0.8rem;
             max-width: fit-content;
-            border-radius:50%;
+            border-radius:100%;
             background-color:$very_dark_blue;
+            img{
+                width: 20px;
+                vertical-align: middle;
+                height: auto;
+            }
         }
         & > h2{
             font-size: 2vw;
@@ -64,5 +73,6 @@ gap:1rem;
 @include mobile{
     grid-template-columns: repeat(1,0.8fr);
     justify-content: center;
+    background:linear-gradient($cyan_primary,$cyan_primary) center/5px 80% no-repeat;
 }
 }

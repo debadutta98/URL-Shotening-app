@@ -18,15 +18,16 @@ $font-poppins:Poppins;
     background-color: $cyan_primary;
     color:white;
     cursor: pointer;
+    font-family: $font-poppins;
     text-align: center;
     @content;
     &:hover{
         color: white;
-        transition-property: opacity;
+        transition-property: background-color;
         transition-duration:500ms;
         transition-delay:100ms;
         transition-timing-function: ease-in;
-        opacity: 0.4;
+        background-color:hsl(180, 57%, 83%);
     }
 }
 

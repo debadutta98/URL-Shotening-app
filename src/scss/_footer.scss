@@ -1,0 +1,105 @@
+@use "./config" as *;
+.first-part {
+    margin-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    background-color: $dark_violet_primary;
+    background-image: url("../images/bg-boost-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    & > h1 {
+        text-align: center;
+    }
+    & > button {
+        margin: auto;
+        @include button {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 2rem;
+        }
+    }
+    @include mobile {
+        background-image: url("../images/bg-boost-mobile.svg");
+    }
+}
+.seond-part {
+    padding: 3rem 2rem 3rem 5rem;
+    background-color: $very_dark_violet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    gap: 1rem;
+    & > img {
+        width: 7rem;
+        height: 2rem;
+        fill-opacity: white;
+        margin-bottom: 2rem;
+        filter: brightness(0) invert(1);
+    }
+    ul {
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        color:$gray_neutral;
+        &:hover {
+            color: $cyan_primary;
+        }
+    }
+    &__main-nav-containers {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        gap: 4rem;
+        span {
+            color: white;
+            font-size: 1.3rem;
+        }
+        &__navs {
+            margin-top: 10px;
+            li {
+                font-size: 1rem;
+                margin-top: 5px;
+                color: $gray_neutral;
+            }
+        }
+
+        &__icons {
+            display: inline-flex;
+            gap: 1rem;
+            li {
+                &:hover {
+                    filter: invert(62%) sepia(50%) saturate(617%) hue-rotate(131deg) brightness(200%) contrast(78%);
+                }
+            }
+        }
+        @media screen and (max-width: 928px) {
+            margin: 0%;
+            margin-right: auto;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__icons {
+            justify-content: center;
+        }
+        &__main-nav-containers {
+            margin: auto;
+            flex-direction: column;
+            text-align: center;
+            &__navs {
+                li {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
