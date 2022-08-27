@@ -8,13 +8,16 @@ background-position: 55% 55%;
 display: grid;
 grid-template-columns:repeat(3,minmax(300px,1fr));
 justify-content: start;
-@media screen and (max-width:1021px) {
+gap:1.2rem;
+@media screen and (max-width:1058px) {
     grid-template-columns:repeat(3,minmax(200px,1fr));
+    gap:1.1rem
 }
 @media screen and (max-width:842px) {
     grid-template-columns:repeat(3,minmax(100px,1fr));
+    gap:1rem
 }
-gap:1.2rem;
+
 @for $i from 1 through 3 {
     $add:0rem;
     @if($i==1){
@@ -28,7 +31,7 @@ gap:1.2rem;
         height: fit-content;
         width: fit-content;
         padding:2rem;
-        box-shadow: 2px 2px 0.5rem $gray_neutral;
+        box-shadow: 1px 1px 4px 0px $gray_neutral;
         background-color: white;
         position: relative;
         margin-top:$add;

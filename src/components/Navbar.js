@@ -1,4 +1,10 @@
+import { useState } from 'react';
+import Overlay from './Overlay';
 const Navbar=()=>{
+    const [toggle,setToggle]=useState(false);
+    const onToggle=()=>{
+        setToggle(!toggle);
+    }
 return (
     <nav>
         <img src={require("../images/logo.svg").default} alt="logo"/>
@@ -12,11 +18,12 @@ return (
             <li><a href="#!">Login</a></li>
             <li><a href="#!" className="auth__nav-button">Sign up</a></li>
         </ul>
-        <div className="nav-menu">
+        <div className="nav-menu" onClick={onToggle}>
             <div></div>
             <div></div>
             <div></div>
         </div>
+        <Overlay className={toggle ? "show" :"hidden"} onToggle={onToggle}/>
     </nav>
 )
 };

@@ -1,0 +1,41 @@
+@use "../config" as *;
+.mobile-nav{
+        position: fixed;
+        top: 15vh;
+        left: 25%;
+        width: 50vw;
+        @media screen and (max-width:444px) {
+            width:80%;
+            left:10%;
+        }
+        z-index: 10;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 5px;
+        hr{
+            border: 0.2px ridge $gray_neutral;
+        }
+        ul{
+            list-style-type: none;
+            margin-bottom: 1.5rem;
+            .auth__nav-button{
+                display: block;
+                width: 100%;
+                @include button{
+                    padding: 5px 15px;
+                    border-radius:1rem;
+                }
+            }
+        }
+        li{
+            margin-top: 1rem;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            &:hover{
+                color:$cyan_primary;
+            }
+        }
+        background-color: $dark_violet_primary;
+    }

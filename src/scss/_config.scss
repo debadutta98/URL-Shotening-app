@@ -37,3 +37,9 @@ $font-poppins:Poppins;
     @content;
 }
 }
+.hidden{
+    display: none;
+}
+.show{
+    display: inline;
+}
