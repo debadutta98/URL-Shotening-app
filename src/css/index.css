@@ -363,7 +363,7 @@ header img {
 }
 .feature-card-container .featureCard-1__img-container {
   position: absolute;
-  top: -1.5rem;
+  top: -1.8rem;
   left: 2rem;
   padding: 0.8rem;
   max-width: -webkit-fit-content;
@@ -373,7 +373,7 @@ header img {
   background-color: hsl(255deg, 11%, 22%);
 }
 .feature-card-container .featureCard-1__img-container img {
-  width: 20px;
+  width: 30px;
   vertical-align: middle;
   height: auto;
 }
@@ -388,6 +388,13 @@ header img {
 @media screen and (max-width: 715px) {
   .feature-card-container .featureCard-1 {
     margin-top: 3rem;
+  }
+  .feature-card-container .featureCard-1__img-container {
+    left: 50%;
+    transform: translate(-50%, -15%);
+  }
+  .feature-card-container .featureCard-1__img-container img {
+    width: 35px;
   }
   .feature-card-container .featureCard-1 > h2 {
     font-size: 4vw;
@@ -416,7 +423,7 @@ header img {
 }
 .feature-card-container .featureCard-2__img-container {
   position: absolute;
-  top: -1.5rem;
+  top: -1.8rem;
   left: 2rem;
   padding: 0.8rem;
   max-width: -webkit-fit-content;
@@ -426,7 +433,7 @@ header img {
   background-color: hsl(255deg, 11%, 22%);
 }
 .feature-card-container .featureCard-2__img-container img {
-  width: 20px;
+  width: 30px;
   vertical-align: middle;
   height: auto;
 }
@@ -441,6 +448,13 @@ header img {
 @media screen and (max-width: 715px) {
   .feature-card-container .featureCard-2 {
     margin-top: 3rem;
+  }
+  .feature-card-container .featureCard-2__img-container {
+    left: 50%;
+    transform: translate(-50%, -15%);
+  }
+  .feature-card-container .featureCard-2__img-container img {
+    width: 35px;
   }
   .feature-card-container .featureCard-2 > h2 {
     font-size: 4vw;
@@ -469,7 +483,7 @@ header img {
 }
 .feature-card-container .featureCard-3__img-container {
   position: absolute;
-  top: -1.5rem;
+  top: -1.8rem;
   left: 2rem;
   padding: 0.8rem;
   max-width: -webkit-fit-content;
@@ -479,7 +493,7 @@ header img {
   background-color: hsl(255deg, 11%, 22%);
 }
 .feature-card-container .featureCard-3__img-container img {
-  width: 20px;
+  width: 30px;
   vertical-align: middle;
   height: auto;
 }
@@ -494,6 +508,13 @@ header img {
 @media screen and (max-width: 715px) {
   .feature-card-container .featureCard-3 {
     margin-top: 3rem;
+  }
+  .feature-card-container .featureCard-3__img-container {
+    left: 50%;
+    transform: translate(-50%, -15%);
+  }
+  .feature-card-container .featureCard-3__img-container img {
+    width: 35px;
   }
   .feature-card-container .featureCard-3 > h2 {
     font-size: 4vw;
