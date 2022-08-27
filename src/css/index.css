@@ -292,7 +292,7 @@ header img {
   transition-timing-function: ease-in;
   background-color: hsl(180deg, 57%, 83%);
 }
-@media screen and (max-width: 537px) {
+@media screen and (max-width: 554px) {
   .user-action-card {
     background-image: url("../images/bg-shorten-mobile.svg");
     gap: 0.5rem;
